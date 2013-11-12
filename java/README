@@ -1,0 +1,5 @@
+How To Compile:-
+	javac Test.java
+
+Run Instruction:-	
+	java -Djava.library.path=. Test

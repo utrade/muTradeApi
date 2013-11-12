@@ -1,0 +1,46 @@
+muTrade API
+
+Version 0.0.1 
+
+URL:- http://www.utradesolutions.com/
+
+Introduction : 
+  This is an early release of the muTrade API, which exposes the core trading functionalities and allows the developer to write an event driven trading algorithm.
+
+Note:
+  This version of API is still experimental and the functionality/interface may break in the future versions of API.
+
+COPYRIGHT
+ (C) 2013 uTrade Solutions Pvt Ltd. All Rights reserved.
+
+Language Supported : C++, Python, JAVA
+
+Directory structure:
+  
+  /cpp
+    /apiTest	qt based test application for ubuntu.
+    /bin	Contains libs.
+    /build	Project build directory.
+    /doc	API documents.
+    /include	API include files.
+    /src	Sample strategy file.
+    README	Build Instructions.
+
+    
+  /java
+    /doc 	API java documents.
+    Test.java	Test strategy.
+    ApplicationImpl.java	Extended Application Class.
+    README	Build Instructions.
+    
+  /python
+    Context.py	API import file.
+    Test.py	Sample strategy.
+
+
+Dependencies:
+  cmake (http://www.cmake.org/)
+  muTrade Backend Server.	(http://www.utradesolutions.com/)
+
+
+

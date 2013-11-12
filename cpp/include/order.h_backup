@@ -1,0 +1,75 @@
+#ifndef MUTRADEAPI_ORDER_H
+#define MUTRADEAPI_ORDER_H
+
+#include "types.h"
+
+namespace mutrade {
+
+  class Order {
+
+  public:
+    Order() { initialize(); }
+    TransactionType getTransactionType() { return _transactionType; }
+    Int64           getClOrdId() { return _clOrdId; }
+    Int64           getOrigClOrdId() { return _origClOrdId; }
+    String          getExchangeOrderId() { return _exchangeOrderId; }
+    String          getSymbol() { return _symbol; }
+    OrderMode       getOrderMode() { return _orderMode; }
+    Int32           getQuantity() { return _quantity; }
+    Int32           getDisclosedQuantity() { return _disclosedQuantity; }
+    Int32           getFilledQuantity() { return _filledQuantity; }
+    Int32           getOldQuantity() { return _oldQuantity; }
+    Int32           getPrice() { return _price; }
+    Int32           getStopPrice() { return _stopPrice; }
+    UChar           getSecurityType() { return _securityType; }
+    TimeInForce     getOrderValidity() { return _orderValidity; }
+    OrderType       getOrderType() { return _orderType; }
+    OrderStatus     getOrderStatus() { return _orderStatus; }
+    Int64           getExchangeEntryTime() { return _exchangeEntryTime; }
+    Int64           getExchangeModifyTime() { return _exchangeModifyTime; }
+
+    void setTransactionType(TransactionType val) { _transactionType = val; }
+    void setClOrdId(Int64 val) { _clOrdId = val; }
+    void setOrigClOrdId(Int64 val) { _origClOrdId = val; }
+    void setExchangeOrderId(String val) { _exchangeOrderId = val; }
+    void setSymbol(String val) { _symbol = val; }
+    void setOrderMode(OrderMode val) { _orderMode = val; }
+    void setQuantity(Int32 val) { _quantity = val; }
+    void setDisclosedQuantity(Int32 val) { _disclosedQuantity = val; }
+    void setFilledQuantity(Int32 val) { _filledQuantity = val; }
+    void setOldQuantity(Int32 val) { _oldQuantity = val; }
+    void setPrice(Int32 val) { _price = val; }
+    void setStopPrice(Int32 val) { _stopPrice = val; }
+    void setSecurityType(UChar val) { _securityType = val; }
+    void setOrderValidity(TimeInForce val) { _orderValidity = val; }
+    void setOrderType(OrderType val) { _orderType = val; }
+    void setOrderStatus(OrderStatus val) { _orderStatus = val; }
+    void setExchangeEntryTime(Int32 val) { _exchangeEntryTime = val; }
+    void setExchangeModifyTime(Int32 val) { _exchangeModifyTime = val; }
+
+    void initialize();
+    void dumpOrder() const;
+  private:
+    Int64           _clOrdId;
+    TransactionType _transactionType;
+    Int64           _origClOrdId;
+    String          _exchangeOrderId;
+    String          _symbol;
+    OrderMode       _orderMode;
+    Int32           _quantity;
+    Int32           _disclosedQuantity;
+    Int32           _filledQuantity;
+    Int32           _oldQuantity;
+    Int32           _price;
+    Int32           _stopPrice;
+    UChar           _securityType;
+    TimeInForce     _orderValidity;
+    OrderType       _orderType;
+    OrderStatus     _orderStatus;
+    Int32           _exchangeEntryTime;
+    Int32           _exchangeModifyTime;
+  };
+
+} // namespace mutrade
+
+#endif

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>621</width>
+    <height>470</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>621</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMain">
+    <property name="title">
+     <string>Main</string>
+    </property>
+    <addaction name="actionLogin"/>
+    <addaction name="actionLogout"/>
+    <addaction name="actionLogs"/>
+    <addaction name="actionAdd_Symbols"/>
+   </widget>
+   <widget class="QMenu" name="menuStrategy">
+    <property name="title">
+     <string>Strategy</string>
+    </property>
+    <addaction name="actionManual_Order"/>
+    <addaction name="actionTwo_Leg_Arbitrage"/>
+   </widget>
+   <widget class="QMenu" name="menuPortfolio">
+    <property name="title">
+     <string>Portfolio</string>
+    </property>
+    <addaction name="actionOrder_Book"/>
+    <addaction name="actionTrade_Book"/>
+    <addaction name="actionNet_Positions"/>
+   </widget>
+   <addaction name="menuMain"/>
+   <addaction name="menuStrategy"/>
+   <addaction name="menuPortfolio"/>
+  </widget>
+  <action name="actionLogin">
+   <property name="text">
+    <string>login</string>
+   </property>
+  </action>
+  <action name="actionLogout">
+   <property name="text">
+    <string>logout</string>
+   </property>
+  </action>
+  <action name="actionOrder_Book">
+   <property name="text">
+    <string>Order Book</string>
+   </property>
+  </action>
+  <action name="actionTrade_Book">
+   <property name="text">
+    <string>Trade Book</string>
+   </property>
+  </action>
+  <action name="actionNet_Positions">
+   <property name="text">
+    <string>Net Positions</string>
+   </property>
+  </action>
+  <action name="actionAdd_Symbols">
+   <property name="text">
+    <string>Add Symbols</string>
+   </property>
+   <property name="toolTip">
+    <string extracomment="Add Symbols to the application using csv file with Instruments i format as specified in the API documentation">Add Symbols</string>
+   </property>
+  </action>
+  <action name="actionManual_Order">
+   <property name="text">
+    <string>Manual Order</string>
+   </property>
+  </action>
+  <action name="actionLogs">
+   <property name="text">
+    <string>Logs</string>
+   </property>
+  </action>
+  <action name="actionTwo_Leg_Arbitrage">
+   <property name="text">
+    <string>Two Leg Arbitrage</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
