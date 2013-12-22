@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{21AB48C6-2A6F-4549-A6BC-034367AC6A51}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>sampleApplication</RootNamespace>
+    <AssemblyName>sampleApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractLogger.cs" />
+    <Compile Include="Application.cs" />
+    <Compile Include="ApplicationImpl.cs" />
+    <Compile Include="Context.cs" />
+    <Compile Include="ContextModule.cs" />
+    <Compile Include="ContextModulePINVOKE.cs" />
+    <Compile Include="Data.cs" />
+    <Compile Include="ExecutionReport.cs" />
+    <Compile Include="ExecutionResponse.cs" />
+    <Compile Include="Instrument.cs" />
+    <Compile Include="InstrumentType.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="LogLevel.cs" />
+    <Compile Include="MarketData.cs" />
+    <Compile Include="NetPositions.cs" />
+    <Compile Include="OptionType.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="OrderBook.cs" />
+    <Compile Include="OrderMode.cs" />
+    <Compile Include="OrderStatus.cs" />
+    <Compile Include="OrderType.cs" />
+    <Compile Include="Portfolio.cs" />
+    <Compile Include="Position.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quote.cs" />
+    <Compile Include="ResponseType.cs" />
+    <Compile Include="sampleStrategy.cs" />
+    <Compile Include="Side.cs" />
+    <Compile Include="SWIGTYPE_p_long_long.cs" />
+    <Compile Include="SWIGTYPE_p_mutrade__detail__ContextImpl.cs" />
+    <Compile Include="SWIGTYPE_p_std__listT_mutrade__Trade_p_t.cs" />
+    <Compile Include="SWIGTYPE_p_std__ofstream.cs" />
+    <Compile Include="TimeInForce.cs" />
+    <Compile Include="Trade.cs" />
+    <Compile Include="TradeBook.cs" />
+    <Compile Include="TradeQue.cs" />
+    <Compile Include="TransactionType.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

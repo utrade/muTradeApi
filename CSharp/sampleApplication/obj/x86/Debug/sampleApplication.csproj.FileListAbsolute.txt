@@ -1,0 +1,5 @@
+C:\Users\utrade\Desktop\CSharp API\sampleApplication\sampleApplication\bin\Debug\sampleApplication.exe
+C:\Users\utrade\Desktop\CSharp API\sampleApplication\sampleApplication\bin\Debug\sampleApplication.pdb
+C:\Users\utrade\Desktop\CSharp API\sampleApplication\sampleApplication\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\utrade\Desktop\CSharp API\sampleApplication\sampleApplication\obj\x86\Debug\sampleApplication.exe
+C:\Users\utrade\Desktop\CSharp API\sampleApplication\sampleApplication\obj\x86\Debug\sampleApplication.pdb
