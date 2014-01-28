@@ -9,7 +9,7 @@
 namespace mutrade {
 
   /**
-   *
+   * \anchor OrderBook
    * \brief OrderBook class
    *
    * This class stores the list of all the orders which have been placed

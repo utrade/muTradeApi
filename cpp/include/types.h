@@ -29,6 +29,7 @@ namespace mutrade
   typedef bool             Boolean;
 
   /**
+   * \anchor Side
    * \brief Side of the trade (Buy/Sell)
    *
    * You can use Side_BUY, Side_BID interchangeably.
@@ -42,9 +43,11 @@ namespace mutrade
   };
 
    /**
-   * \brief Instrument Type of the trade (Buy/Sell)
+   * \anchor InstrumentType 
+   * \brief Instrument Type of the trade (Stock/Future/Option)
    *
-   * You can use Side_BUY, Side_BID interchangeably.
+   * It can have values InstrumentType_STOCK, InstrumentType_FUTURE 
+   * or InstrumentType_OPTION.
    */
   enum InstrumentType
   {
@@ -54,6 +57,7 @@ namespace mutrade
   };
 
   /**
+   * \anchor OptionType
    * \brief Option Type  (Call/Put)
    *
    * You can use OptionType_PUT, OptionType_CALL.
@@ -64,7 +68,8 @@ namespace mutrade
     OptionType_CALL
   };
 
-    /**
+  /**
+   * \anchor TimeInForce
    * \brief Time In Force  (DAY/IOC)
    *
    * You can use TimeInForce_DAY, TimeInForce_IOC  interchangeably.
@@ -76,7 +81,8 @@ namespace mutrade
     TimeInForce_MAX
   };
 
-   /**
+  /**
+   * \anchor OrderType 
    * \brief Order Type 
    *
    * You can use OrderType_LIMIT, OrderType_MARKET, OrderType_STOP_LIMIT 
@@ -90,7 +96,8 @@ namespace mutrade
     OrderType_MAX
   };
 
-   /**
+  /**
+   * \anchor TransactionType
    * \brief Transaction Type 
    *
    * You can use TransactionType_NEW, TransactionType_MODIFY
@@ -105,8 +112,9 @@ namespace mutrade
   };
 
    /**
-   * \brief Order Status 
-   */
+    * \anchor OrderStatus
+    * \brief Order Status 
+    */
   enum OrderStatus
   {
     OrderStatus_PENDING,
@@ -127,8 +135,9 @@ namespace mutrade
   };
   
    /**
-   * \brief Order Mode
-   */
+    * \anchor OrderMode
+    * \brief Order Mode
+    */
   enum OrderMode
   {
     OrderMode_BUY = 0,
@@ -137,9 +146,10 @@ namespace mutrade
   };
 
    /**
-   * \brief Response Type
-   * Internally used by API.
-   */
+    * \anchor ResponseType
+    * \brief Response Type
+    * Internally used by API.
+    */
   enum ResponseType
   {
     ResponseType_SUCCESS,
@@ -158,6 +168,14 @@ namespace mutrade
 
   String longToString(Int64 num);
 
+  /**
+   * \anchor ExecutionReport
+   * \brief Execution Report Class.
+   *
+   * User will get Execution Report as order confirmation
+   * from the exchange. For user it is read only class. Api 
+   * will update the members of this class.
+   */
   class ExecutionReport
   {
   public:
@@ -166,21 +184,63 @@ namespace mutrade
     ExecutionReport(RSP::OrderConfirmation& confirmation);
     void initialize();
 
+    /**
+     * \brief Get Client Order Id.
+     *
+     * \return Client Order Id.
+     *
+     */
     Int64 getClOrderId() const { return _clOrderId; }
-    Int64 getExchangeOrderId() const { return _exchangeOrderId; }
+    String getExchangeOrderId() const { return _exchangeOrderId; }
+    /**
+     * \brief Get Symbol Id.
+     *
+     * \return Symbol Id.
+     */
     Int64 getSymbolId() const { return _symbolId; }
+    /**
+     * \brief Get Last Fill Quantity.
+     *
+     * \return Filled Quantity.
+     */
     Int32 getLastFillQuantity() const { return _lastFillQuantity; }
+    /**
+     * \brief Get Last Fill Price.
+     *
+     * \return Last Fill Price.
+     */
     Int32 getLastFillPrice() const { return _lastFillPrice; }
     Int32 getExchangeEntryTime() const { return _exchangeEntryTime; }
     Int32 getExchangeModifyTime() const { return _exchangeModifyTime; }
     Int32 getStrategyId() const { return _strategyId; }
+    /**
+     * \brief Get Client Id.
+     *
+     * \return User Id.
+     */
     Int32 getClientId() const { return _clientId; }
     Int32 getLimitPrice() const { return _limitPrice; }
     UChar getOrderStatus() const { return _orderStatus; }
-    UChar getOrderMode() const { return _orderMode; }
+    /**
+     * \brief Get Order Mode.
+     *
+     * \return \ref OrderMode  Buy or sell order.
+     */
+    OrderMode getOrderMode() const { return _orderMode; }
+    /**
+     * \brief Get Orde Quantity.
+     *
+     * \return Ordered qty.
+     */
     Int32 getOrderQuantity() const { return _orderQuantity; }
     Int32 getOrderPrice() const { return _orderPrice; }
     Int32 getIOCCanceledQuantity() const { return _iocCanceledQuantity; }
+    /**
+     * \brief Get Original Original Id.
+     *
+     * \return Original Ordered Id.
+     * User must update this field while modifying the order.
+     */
     Int64 getOriginalClOrderId() const { return _originalClOrderId; }
     Int64 getConfirmationTimeSeconds() const
       { return _confirmationTimeSeconds; }
@@ -188,7 +248,18 @@ namespace mutrade
       { return _confirmationTimeMicroSeconds; }
     UChar getIsOffline() const {return _isOffline; }
     Int64 getSequenceNumber() const {return _sequenceNumber; }
-    Int64 getTradeId() const {return _tradeId; }
+    /**
+     * \brief Get Trade Id.
+     *
+     * \return Trade Id.
+     */
+    String getTradeId() const {return _tradeId; }
+    /**
+     * \brief Get Error Code.
+     *
+     * \return Error Code.
+     * This filed is useful when dealing with BSE.
+     */
     Int32 getErrorCode() const {return _errorCode; }
     Int32 getReasonText() const {return _reasonText; }
     UChar getUnknownOrder() const {return _unknownOrder; }
@@ -196,7 +267,7 @@ namespace mutrade
 
     void setClOrderId(Int64 clOrderId)
       { _clOrderId = clOrderId; }
-    void setExchangeOrderId(Int64 exchangeOrderId)
+    void setExchangeOrderId(String exchangeOrderId)
       { _exchangeOrderId = exchangeOrderId; }
     void setSymbolId(Int64 symbolId)
       { _symbolId = symbolId; }
@@ -216,8 +287,11 @@ namespace mutrade
       { _limitPrice = limitPrice; }
     void setOrderStatus(UChar orderStatus)
       { _orderStatus = orderStatus; }
-    void setOrderMode(UChar orderMode)
-      { _orderMode = orderMode; }
+    void setOrderMode(OrderMode orderMode)
+      {
+        _orderMode = orderMode; 
+      }
+
     void setOrderQuantity(Int32 quantity)
       { _orderQuantity = quantity; }
     void setOrderPrice(Int32 price)
@@ -234,7 +308,7 @@ namespace mutrade
       { _isOffline = isOffline; }
     void setSequenceNumber(Int64 sequenceNumber)
       { _sequenceNumber = sequenceNumber; }
-    void setTradeId(Int64 tradeId)
+    void setTradeId(String tradeId)
       { _tradeId = tradeId; }
     void setErrorCode(Int32 errorCode)
       { _errorCode = errorCode; }
@@ -251,7 +325,7 @@ namespace mutrade
 
   private:
     Int64 _clOrderId;
-    Int64 _exchangeOrderId;
+    String _exchangeOrderId;
     Int64 _symbolId;
     Int32 _lastFillQuantity;
     Int32 _lastFillPrice;
@@ -262,7 +336,7 @@ namespace mutrade
     // Limit price will come in Market to Limit order conversion
     Int32 _limitPrice;
     UChar _orderStatus;
-    UChar _orderMode;
+    OrderMode _orderMode;
     // Adding following two fields for market making
     Int32 _orderQuantity;
     Int32 _orderPrice;
@@ -272,7 +346,7 @@ namespace mutrade
     Int64 _confirmationTimeMicroSeconds;
     UChar _isOffline;
     Int64 _sequenceNumber;
-    Int64 _tradeId;
+    String _tradeId;
     Int32 _errorCode;
     Int32 _reasonText;
     UChar _unknownOrder;
@@ -280,6 +354,12 @@ namespace mutrade
 
   };
 
+  /**
+   * \anchor ExecutionResponse
+   * \brief Execution Response
+   *
+   * Internally used by API.
+   */
   class ExecutionResponse
   {
     public :

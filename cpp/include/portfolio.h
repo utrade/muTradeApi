@@ -2,8 +2,6 @@
 #define MUTRADEAPI_PORTFOLIO_H
 
 #include <boost/lexical_cast.hpp>
-//#include "../shared/defines.h"
-//#include "../shared/response.h"
 #include "orderbook.h"
 #include "tradebook.h"
 #include "netpositions.h"
@@ -18,6 +16,7 @@
 namespace mutrade {
 
   /**
+   * \anchor Portfolio
    * \class Portfolio
    * \brief Portfolio class
    *
@@ -73,7 +72,7 @@ namespace mutrade {
      * received.
      */   
     void handleConfirmations(mutrade::ExecutionReport *conf, 
-                             UInt32 responseCategory);
+                             UNSIGNED_SHORT responseCategory);
     
       /**
      * \brief Gets Order From TokenId 

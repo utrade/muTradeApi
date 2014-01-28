@@ -178,12 +178,25 @@ namespace mutrade {
   class Logger
   {
   public:
+    /**
+     * \brief Get an Instance of the Context class
+     *
+     * Logger class is a Singleton class, which will have only one instance.
+     * This instance can be accessed using the \c getInstance method.
+     *
+     */
     static Logger* getInstance()
     {
       static Logger logger;
       return &logger;
     }
 
+    /**
+     * \brief Set Log Level.
+     *
+     * \param level
+     *
+     */
     void setLogLevel(LogLevel level)
     {
       _loggerObj->setLogLevel(level);

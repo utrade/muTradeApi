@@ -58,7 +58,7 @@ namespace mutrade
      * \brief Create an instrument from string identifier
      */
     Instrument();
-
+    
     /**
      * \brief Create an instrument from string identifier
      */
@@ -69,7 +69,6 @@ namespace mutrade
      */
     InstrumentType     getInstrumentType() const;
     
-    
     /**
      * \brief Get Expiry Date of the instrument (for FUTURE/OPTION)
      */
@@ -79,6 +78,12 @@ namespace mutrade
      * \brief Get Strike Price of the option (for OPTIONs)
      */
     Int64              getStrikePrice() const;
+    
+    /**
+     * \brief Get Type of the option - CALL / PUT (for OPTIONs)
+     */
+    OptionType         getOptionType() const;
+      
 	/**
      * \brief Get Series of instrument.
      */
@@ -87,20 +92,15 @@ namespace mutrade
     /**
      * \brief Get Lot Size of the instrument (for FUTURE/OPTION)
      */
-    Int32               getLotSize() const;                
+    Int32               getLotSize() const;
       
     /**
      * \brief Get Tick Size for instrument
      */
-    Int32               getTickSize() const;               
-    
-    /**
-     * \brief Get Type of the option - CALL / PUT (for OPTIONs)
-     */
-    OptionType         getOptionType() const;
-    
+    Int32               getTickSize() const;
+
+
     bool    operator< (const Instrument &rhs) const;
-    
 
     bool    operator== (const Instrument &rhs) const;
 
@@ -108,8 +108,8 @@ namespace mutrade
      * \brief Get Instrument  name as string.
      */
     String getInstrumentName();
-    
   
+    ~Instrument();
   private:
    
     String    _instrumentName;

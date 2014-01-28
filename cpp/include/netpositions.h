@@ -1,10 +1,6 @@
 #ifndef MUTRADEAPI_NET_POSITIONS_H
 #define MUTRADEAPI_NET_POSITIONS_H
 
-/* #include "./shared/common.h" */
-/* #include "./shared/commands.h" */
-/* #include "./shared/response.h" */
-
 #include <map>
 
 #include "types.h"
@@ -13,7 +9,7 @@
 namespace mutrade {
 
   /**
-   *
+   * \anchor NetPositions
    * \brief NetPositions class
    *
    * This class stores the list of all the positions which the client has
@@ -44,7 +40,7 @@ namespace mutrade {
      * \param side ( BUY/SELL )
      */
 
-    Position* getPosition(Instrument instrument, Side orderMode)
+    Position* getPosition(Instrument &instrument, Side orderMode)
       throw (std::domain_error);
 
     /**

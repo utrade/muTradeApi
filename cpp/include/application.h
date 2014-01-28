@@ -18,6 +18,23 @@ namespace mutrade
    *
    * \note This version of API is still experimental and the functionality/interface
    * may break in the future versions of API.
+   *
+   * \b Code \b Flow
+   * @n 1) Application developer has to override the virtual methods of Application class.
+   * @n 2) Register your overridden Application class to API using \ref setApplication function. 
+   * @n 3) Call \ref login function. Once user is logged in, application developer has to 
+   *         control its flow from the overridden Application class. 
+   * @n 4) In \ref onLogin user has to call \ref loadInstrument.[User must load the instrument 
+   *         before using it.]
+   * @n 5) In \ref onLoadInstrumentEnd user should call \ref subscribe function in order to get 
+   *         live ticks/quotes from the server. 
+   * @n 6) For every subscribed symbol user will get an event \ref onTick.
+   * @n 7) Based on the ticks user can place their order using \ref placeOrder.
+   * @n 8) For every placed order user will get an event \ref onExecutionReport.
+   * 
+   * @n \ref OrderBook, \ref TradeBook and \ref NetPositions can be accessed from the \ref Portfolio 
+   * class.
+   *
    */
 
 
@@ -36,47 +53,50 @@ namespace mutrade
   class Application
   {
   public:
-    virtual ~Application();
+
+
+    virtual ~Application(){};
 
     /**
+     * \anchor onTick
      * \brief Event called when a tick is received
      *
-     * \param
+     * \param 
      */
-    //virtual void onTick(const MarketData &) = 0;
-    virtual void onTick(const MarketData &);
+    virtual void onTick(const MarketData &) = 0;
 
 
     /**
+     * \anchor onLogin
      * \brief Event called when Login message is returned
      *
      * \param
      */
-    //virtual void onLogin(bool status) = 0;
-    virtual void onLogin(bool status);
+    virtual void onLogin(bool status) = 0;
 
     /**
+     * \anchor onLogout
      * \brief Event called when Logout message is returned
      *
      * \param
      */
-    //virtual void onLogout(bool status) = 0;
-    virtual void onLogout(bool status);
+    virtual void onLogout(bool status) = 0;
 
     /**
+     * \anchor onExecutionReport
      * \brief Event called when an execution is received from Server
      *
      * \param
      */
-    //virtual void onExecutionReport(ExecutionReport& report) = 0;
     virtual void onExecutionReport(ExecutionReport& report);
+    
     /**
-     * \brief Event called when instrument is loaded from the backend
+     * \anchor onLoadInstrumentEnd
+     * \brief Event called when instrument is loaded from the back-end
      *
      * \param
      */
-    //virtual void onLoadInstrumentEnd(bool success) = 0;
-    virtual void onLoadInstrumentEnd(const String instrumentName, bool success);
+    virtual void onLoadInstrumentEnd(const String instrumentName, bool success)=0;
 
   };
 

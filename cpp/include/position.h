@@ -2,7 +2,6 @@
 #define MUTRADEAPI_POSITION_H
 
 #include "types.h"
-//#include "../shared/commands.h"
 #include <cstring>
 #include "instrument.h"
 namespace mutrade {
@@ -11,7 +10,7 @@ namespace mutrade {
    *
    * \brief Position class
    *
-   * This class is required for \cNetPositions class.
+   * This class is required for \c NetPositions class.
    *
    * \note We need to create an object of type Position before aclling 
    * NetPosition. 
