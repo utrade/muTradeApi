@@ -22,8 +22,8 @@ struct SymbolData
   Int32       minProfit;
   Int32       avgPriceFirstLeg;
   Int32       avgPriceSecondLeg;
-  Side        firstLegSide;
-  Side        secondLegSide;
+  OrderMode   firstLegSide;
+  OrderMode   secondLegSide;
   Boolean     bidPlaced;
   Int16       firstLegMode;
   Int16       secondLegMode;
@@ -74,7 +74,7 @@ void modifyOrder()
   sd->firstLegOrder->setOrigClOrdId(
           sd->firstLegOrder->getOrigClOrdId());
   sd->firstLegOrder->setClOrdId(sd->firstLegOrder->getClOrdId());
-  sd->firstLegOrder->dumpOrder();
+  //sd->firstLegOrder->dumpOrder();
   context->getInstance()->placeOrder(*(sd->firstLegOrder));
 }
 
@@ -164,7 +164,7 @@ void Application::onTick(const MarketData& md)
     {
       getAveragePrice( static_cast<mutrade::MarketData> (md), 
                        sd->qty, 
-                       sd->firstLegSide, 
+                       (mutrade::Side)sd->firstLegSide, 
                        sd->avgPriceFirstLeg
                       );
       
@@ -175,7 +175,7 @@ void Application::onTick(const MarketData& md)
     {
       getAveragePrice( static_cast<mutrade::MarketData> (md), 
                        sd->qty, 
-                       sd->secondLegSide, 
+                       (mutrade::Side)sd->secondLegSide, 
                        sd->avgPriceSecondLeg
                      );
 
@@ -323,10 +323,6 @@ void Application::onLoadInstrumentEnd(
 
 }
 
-Application::~Application()
-{
-}
-
 
 void init()
 {
@@ -335,8 +331,8 @@ void init()
   sd->minProfit = 274000;
   sd->avgPriceFirstLeg = 0;
   sd->avgPriceSecondLeg = 0;
-  sd->firstLegSide = mutrade::Side_SELL;
-  sd->secondLegSide = mutrade::Side_BUY;
+  sd->firstLegSide = mutrade::OrderMode_SELL;
+  sd->secondLegSide = mutrade::OrderMode_BUY;
   sd->bidPlaced = false;
   sd->firstLegMode = 1;
   sd->secondLegMode = -1;
