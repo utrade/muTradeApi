@@ -26,8 +26,6 @@ void StrategyDriver::onExecutionReport(const FIX42::ExecutionReport &report)
         if(iter!= _clOrderIdStrategyMap.end()){
           boost::shared_ptr<AbstractStrategy> sg = iter->second;
             sg->onExecutionReport(report);
-
-            //_clOrderIdStrategyMap.erase(fixId);
         }
     }
     catch(...)
@@ -111,9 +109,6 @@ std::string StrategyDriver::genClOrderId()
   orderIdCounter++;
   if (orderIdCounter == maxOrdersPerSecond)
     orderIdCounter = 0;
-  //                                  // Release lock
-  //                                    pthread_mutex_unlock( &uniqueOrderIdMutex );
-  //
   oss<<orderId;
 
   return oss.str();
