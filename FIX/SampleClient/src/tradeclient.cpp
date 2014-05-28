@@ -33,6 +33,12 @@
 
 #include "getopt-repl.h"
 
+/**
+ * @brief main
+ * @param argc
+ * @param argv
+ * @return
+ */
 int main( int argc, char** argv )
 {
   if ( argc != 2 )

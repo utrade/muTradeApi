@@ -39,144 +39,403 @@
 
 class StrategyDriver;
 
+/**
+ * @brief The Application class
+ */
 class Application :
-      public FIX::Application,
-      public FIX::MessageCracker
+        public FIX::Application,
+        public FIX::MessageCracker
 {
 public:
+
+    /**
+     * @brief run
+     */
     void run();
 
 private:
-  void onCreate( const FIX::SessionID& ) 
-  {
-    std::cout << std::endl << __LINE__ << " *****************" << std::endl;
-  }
-  void onLogon( const FIX::SessionID& sessionID );
-  void onLogout( const FIX::SessionID& sessionID );
-  void toAdmin( FIX::Message& message, const FIX::SessionID& ) 
-  {
-    std::cout << std::endl << __LINE__ << " *****************" << std::endl;
-    
-    FIX::MsgType msgType;
-    message.getHeader().getField(msgType);
 
-    if (FIELD_GET_REF(message.getHeader(), MsgType) == FIX::MsgType_Logon)
+    /**
+     * @brief onCreate
+     */
+    void onCreate( const FIX::SessionID& )
     {
-      message.setField(FIX::Username("11"));
-      message.setField(FIX::Password("Abhishek"));
-      std::cout << "*********************" << std::endl;
+        std::cout << std::endl << __LINE__ << " *****************" << std::endl;
     }
-    dismantleFIX("From FIX-CLIENT",message.toString());
 
-  }
-  void toApp( FIX::Message&, const FIX::SessionID& )
-  throw( FIX::DoNotSend );
-  void fromAdmin( const FIX::Message& message, const FIX::SessionID& )
-  throw( FIX::FieldNotFound, FIX::IncorrectDataFormat, FIX::IncorrectTagValue, FIX::RejectLogon ) 
-  {
-      std::cout << std::endl << __LINE__ << " *****************" << std::endl;
-      dismantleFIX("From FIX-Server",message.toString());
-  }
-  void fromApp( const FIX::Message& message, const FIX::SessionID& sessionID )
-  throw( FIX::FieldNotFound, FIX::IncorrectDataFormat, FIX::IncorrectTagValue, FIX::UnsupportedMessageType );
+    /**
+     * @brief onLogon
+     * @param sessionID
+     */
+    void onLogon( const FIX::SessionID& sessionID );
 
-  void onMessage( const FIX42::ExecutionReport&, const FIX::SessionID& );
-  void onMessage( const FIX42::OrderCancelReject&, const FIX::SessionID& );
-  void onMessage( const FIX42::MarketDataSnapshotFullRefresh&, const FIX::SessionID& );
+    /**
+     * @brief onLogout
+     * @param sessionID
+     */
+    void onLogout( const FIX::SessionID& sessionID );
 
-  void queryEnterOrder();
-  void queryCancelOrder();
-  void queryReplaceOrder();
-  void queryMarketDataRequest();
-  static FIX42::NewOrderSingle queryNewOrderSingle42();
+    /**
+     * @brief toAdmin
+     * @param message
+     */
+    void toAdmin( FIX::Message& message, const FIX::SessionID& )
+    {
+        std::cout << std::endl << __LINE__ << " *****************" << std::endl;
 
-  FIX42::OrderCancelRequest queryOrderCancelRequest42();
-  FIX42::OrderCancelReplaceRequest queryCancelReplaceRequest42();
-  
-  static FIX42::MarketDataRequest queryMarketDataRequest42();
-  
-  static void queryHeader( FIX::Header& header );
-  static char queryAction();
-  bool queryConfirm( const std::string& query );
+        FIX::MsgType msgType;
+        message.getHeader().getField(msgType);
 
-  static FIX::SenderCompID querySenderCompID();
-  static FIX::TargetCompID queryTargetCompID();
-  static FIX::TargetSubID queryTargetSubID();
-  static FIX::ClOrdID queryClOrdID();
-  static FIX::OrigClOrdID queryOrigClOrdID();
-  static FIX::Symbol querySymbol();
-  static FIX::Side querySide();
-  static FIX::OrderQty queryOrderQty();
-  static FIX::OrdType queryOrdType();
-  static FIX::Price queryPrice();
-  static FIX::StopPx queryStopPx();
-  static FIX::TimeInForce queryTimeInForce();
-  static FIX::SecurityType querySecurityType();
-  static FIX::SecurityExchange querySecurityExchange();
-  static FIX::MaturityMonthYear queryMaturityMonthYear();
-  static FIX::ExpireDate queryMaturityDate();
-  static FIX::MaturityDay queryMaturityDay();
-  static FIX::PutOrCall queryOptionMode();
-  static FIX::StrikePrice queryStrikePrice();
+        if (FIELD_GET_REF(message.getHeader(), MsgType) == FIX::MsgType_Logon)
+        {
+            message.setField(FIX::Username("11"));
+            message.setField(FIX::Password("Abhishek"));
+            std::cout << "*********************" << std::endl;
+        }
+        dismantleFIX("From FIX-CLIENT",message.toString());
+
+    }
+
+    /**
+     * @brief toApp
+     */
+    void toApp( FIX::Message&, const FIX::SessionID& )
+    throw( FIX::DoNotSend );
+
+    /**
+     * @brief fromAdmin
+     * @param message
+     */
+    void fromAdmin( const FIX::Message& message, const FIX::SessionID& )
+    throw( FIX::FieldNotFound, FIX::IncorrectDataFormat, FIX::IncorrectTagValue, FIX::RejectLogon )
+    {
+        std::cout << std::endl << __LINE__ << " *****************" << std::endl;
+        dismantleFIX("From FIX-Server",message.toString());
+    }
+
+    /**
+     * @brief fromApp
+     * @param message
+     * @param sessionID
+     */
+    void fromApp( const FIX::Message& message, const FIX::SessionID& sessionID )
+    throw( FIX::FieldNotFound, FIX::IncorrectDataFormat, FIX::IncorrectTagValue, FIX::UnsupportedMessageType );
+
+
+    /**
+     * @brief onMessage
+     */
+    void onMessage( const FIX42::ExecutionReport&, const FIX::SessionID& );
+
+    /**
+     * @brief onMessage
+     */
+    void onMessage( const FIX42::OrderCancelReject&, const FIX::SessionID& );
+
+    /**
+     * @brief onMessage
+     */
+    void onMessage( const FIX42::MarketDataSnapshotFullRefresh&, const FIX::SessionID& );
+
+    /**
+     * @brief queryEnterOrder
+     */
+    void queryEnterOrder();
+
+    /**
+     * @brief queryCancelOrder
+     */
+    void queryCancelOrder();
+
+    /**
+     * @brief queryReplaceOrder
+     */
+    void queryReplaceOrder();
+
+    /**
+     * @brief queryMarketDataRequest
+     */
+    void queryMarketDataRequest();
+
+    /**
+     * @brief queryNewOrderSingle42
+     * @return
+     */
+    static FIX42::NewOrderSingle queryNewOrderSingle42();
+
+    /**
+     * @brief queryOrderCancelRequest42
+     * @return
+     */
+    FIX42::OrderCancelRequest queryOrderCancelRequest42();
+
+    /**
+     * @brief queryCancelReplaceRequest42
+     * @return
+     */
+    FIX42::OrderCancelReplaceRequest queryCancelReplaceRequest42();
+
+    /**
+     * @brief queryMarketDataRequest42
+     * @return
+     */
+    static FIX42::MarketDataRequest queryMarketDataRequest42();
+
+    /**
+     * @brief queryHeader
+     * @param header
+     */
+    static void queryHeader( FIX::Header& header );
+
+    /**
+     * @brief queryAction
+     * @return
+     */
+    static char queryAction();
+
+    /**
+     * @brief queryConfirm
+     * @param query
+     * @return
+     */
+    bool queryConfirm( const std::string& query );
+
+    /**
+     * @brief querySenderCompID
+     * @return
+     */
+    static FIX::SenderCompID querySenderCompID();
+
+    /**
+     * @brief queryTargetCompID
+     * @return
+     */
+    static FIX::TargetCompID queryTargetCompID();
+
+    /**
+     * @brief queryTargetSubID
+     * @return
+     */
+    static FIX::TargetSubID queryTargetSubID();
+
+    /**
+     * @brief queryClOrdID
+     * @return
+     */
+    static FIX::ClOrdID queryClOrdID();
+
+    /**
+     * @brief queryOrigClOrdID
+     * @return
+     */
+    static FIX::OrigClOrdID queryOrigClOrdID();
+
+    /**
+     * @brief querySymbol
+     * @return
+     */
+    static FIX::Symbol querySymbol();
+
+    /**
+     * @brief querySide
+     * @return
+     */
+    static FIX::Side querySide();
+
+    /**
+     * @brief queryOrderQty
+     * @return
+     */
+    static FIX::OrderQty queryOrderQty();
+
+    /**
+     * @brief queryOrdType
+     * @return
+     */
+    static FIX::OrdType queryOrdType();
+
+    /**
+     * @brief queryPrice
+     * @return
+     */
+    static FIX::Price queryPrice();
+
+    /**
+     * @brief queryStopPx
+     * @return
+     */
+    static FIX::StopPx queryStopPx();
+
+    /**
+     * @brief queryTimeInForce
+     * @return
+     */
+    static FIX::TimeInForce queryTimeInForce();
+
+    /**
+     * @brief querySecurityType
+     * @return
+     */
+    static FIX::SecurityType querySecurityType();
+
+    /**
+     * @brief querySecurityExchange
+     * @return
+     */
+    static FIX::SecurityExchange querySecurityExchange();
+
+    /**
+     * @brief queryMaturityMonthYear
+     * @return
+     */
+    static FIX::MaturityMonthYear queryMaturityMonthYear();
+
+    /**
+     * @brief queryMaturityDateh
+     * @return
+     */
+    static FIX::ExpireDate queryMaturityDate();
+
+    /**
+     * @brief queryMaturityDay
+     * @return
+     */
+    static FIX::MaturityDay queryMaturityDay();
+
+    /**
+     * @brief queryOptionMode
+     * @return
+     */
+    static FIX::PutOrCall queryOptionMode();
+
+    /**
+     * @brief queryStrikePrice
+     * @return
+     */
+    static FIX::StrikePrice queryStrikePrice();
 
 public :
 
-  static FIX42::MarketDataRequest  
+    /**
+     * @brief queryMarketDataRequest42
+     * @param symbol
+     * @param exchange
+     * @param securityType
+     * @param maturityDay
+     * @param maturityMonthYear
+     * @param strikePrice
+     * @param putCall
+     * @param senderCompId
+     * @param TargetSubID
+     * @return
+     */
+    static FIX42::MarketDataRequest
     queryMarketDataRequest42(
-      const FIX::Symbol &symbol,
-      const FIX::SecurityExchange &exchange,
-      const FIX::SecurityType &securityType,
-      const FIX::MaturityDay &maturityDay,
-      const FIX::MaturityMonthYear &maturityMonthYear,
-      const FIX::StrikePrice &strikePrice,
-      const FIX::PutOrCall &putCall,
-      const FIX::SenderCompID &senderCompId,
-      const FIX::TargetCompID &TargetSubID);
+            const FIX::Symbol &symbol,
+            const FIX::SecurityExchange &exchange,
+            const FIX::SecurityType &securityType,
+            const FIX::MaturityDay &maturityDay,
+            const FIX::MaturityMonthYear &maturityMonthYear,
+            const FIX::StrikePrice &strikePrice,
+            const FIX::PutOrCall &putCall,
+            const FIX::SenderCompID &senderCompId,
+            const FIX::TargetCompID &TargetSubID);
 
 
+    /**
+     * @brief getMarketDataUniqueSignature
+     * @param message
+     * @return
+     */
+    static std::string getMarketDataUniqueSignature(const FIX42::Message *message);
 
-  static std::string getMarketDataUniqueSignature(const FIX42::Message *message); 
-
-  static std::string getMarketDataUniqueSignature(const FIX42::MarketDataRequest &message) ;
-  
-  static FIX42::NewOrderSingle queryNewOrderSingle42(
-      const FIX::ClOrdID &clordId,
-      const FIX::Symbol &symbol,
-      const FIX::Side &side,
-      const FIX::OrdType &orderType,
-      const FIX::SecurityExchange &securityExchange,
-      const FIX::OrderQty &orderQty,
-      const FIX::Price &price,
-      const FIX::StopPx &stopPrice,
-      const FIX::TimeInForce &timeInForce,
-      const FIX::SecurityType &securityType,
-      const FIX::MaturityMonthYear &maturityMonthYear,
-      const FIX::MaturityDay &maturityDay,
-      const FIX::StrikePrice &strikePrice,
-      const FIX::PutOrCall &putOrCall,
-      const FIX::SenderCompID &senderCompId,
-      const FIX::TargetCompID &targetCompId);
+    /**
+     * @brief getMarketDataUniqueSignature
+     * @param message
+     * @return
+     */
+    static std::string getMarketDataUniqueSignature(const FIX42::MarketDataRequest &message) ;
 
 
-  static FIX42::OrderCancelReplaceRequest queryCancelReplaceRequest42(
-      const FIX::OrdType &orderType,
-      const FIX::OrigClOrdID &origClOrdId,
-      const FIX::ClOrdID &clOrdId,
-      const FIX::Symbol &symbol,
-      const FIX::Side &side,
-      const FIX::Price &price,
-      const FIX::OrderQty &orderQty,
-      const FIX::SenderCompID &senderCompID,
-      const FIX::TargetCompID &targetCompID);
+    /**
+     * @brief queryNewOrderSingle42
+     * @param clordId
+     * @param symbol
+     * @param side
+     * @param orderType
+     * @param securityExchange
+     * @param orderQty
+     * @param price
+     * @param stopPrice
+     * @param timeInForce
+     * @param securityType
+     * @param maturityMonthYear
+     * @param maturityDay
+     * @param strikePrice
+     * @param putOrCall
+     * @param senderCompId
+     * @param targetCompId
+     * @return
+     */
+    static FIX42::NewOrderSingle queryNewOrderSingle42(
+            const FIX::ClOrdID &clordId,
+            const FIX::Symbol &symbol,
+            const FIX::Side &side,
+            const FIX::OrdType &orderType,
+            const FIX::SecurityExchange &securityExchange,
+            const FIX::OrderQty &orderQty,
+            const FIX::Price &price,
+            const FIX::StopPx &stopPrice,
+            const FIX::TimeInForce &timeInForce,
+            const FIX::SecurityType &securityType,
+            const FIX::MaturityMonthYear &maturityMonthYear,
+            const FIX::MaturityDay &maturityDay,
+            const FIX::StrikePrice &strikePrice,
+            const FIX::PutOrCall &putOrCall,
+            const FIX::SenderCompID &senderCompId,
+            const FIX::TargetCompID &targetCompId);
 
-  
-  static FIX42::OrderCancelRequest queryOrderCancelRequest42(
-    const FIX::OrigClOrdID &origClOrdID,
-    const FIX::ClOrdID &clOrdID,
-    const FIX::Symbol &symbol,
-    const FIX::Side &side,
-    const FIX::SenderCompID &senderCompID,
-    const FIX::TargetCompID &targetCompID);
+    /**
+     * @brief queryCancelReplaceRequest42
+     * @param orderType
+     * @param origClOrdId
+     * @param clOrdId
+     * @param symbol
+     * @param side
+     * @param price
+     * @param orderQty
+     * @param senderCompID
+     * @param targetCompID
+     * @return
+     */
+    static FIX42::OrderCancelReplaceRequest queryCancelReplaceRequest42(
+            const FIX::OrdType &orderType,
+            const FIX::OrigClOrdID &origClOrdId,
+            const FIX::ClOrdID &clOrdId,
+            const FIX::Symbol &symbol,
+            const FIX::Side &side,
+            const FIX::Price &price,
+            const FIX::OrderQty &orderQty,
+            const FIX::SenderCompID &senderCompID,
+            const FIX::TargetCompID &targetCompID);
+
+    /**
+     * @brief queryOrderCancelRequest42
+     * @param origClOrdID
+     * @param clOrdID
+     * @param symbol
+     * @param side
+     * @param senderCompID
+     * @param targetCompID
+     * @return
+     */
+    static FIX42::OrderCancelRequest queryOrderCancelRequest42(
+            const FIX::OrigClOrdID &origClOrdID,
+            const FIX::ClOrdID &clOrdID,
+            const FIX::Symbol &symbol,
+            const FIX::Side &side,
+            const FIX::SenderCompID &senderCompID,
+            const FIX::TargetCompID &targetCompID);
 };
 
 #endif
