@@ -1,0 +1,228 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AbstractStrategy	src/samplestrategy.h	/^    AbstractStrategy(const AlgoType &type):$/;"	f	class:AbstractStrategy
+AbstractStrategy	src/samplestrategy.h	/^class AbstractStrategy{$/;"	c
+AlgoType	src/samplestrategy.h	/^enum AlgoType{$/;"	g
+AlgoType_FutFut	src/samplestrategy.h	/^    AlgoType_FutFut,$/;"	e	enum:AlgoType
+AlgoType_MAX	src/samplestrategy.h	/^    AlgoType_MAX$/;"	e	enum:AlgoType
+AlgoType_SampleBidding	src/samplestrategy.h	/^    AlgoType_SampleBidding =0,$/;"	e	enum:AlgoType
+Application	src/application.h	/^class Application :$/;"	c
+BADARG	src/getopt.c	52;"	d	file:
+BADCH	src/getopt.c	51;"	d	file:
+CMAKE_BINARY_DIR	build/Makefile	/^CMAKE_BINARY_DIR = \/code\/jivjot\/Client\/build$/;"	m
+CMAKE_BINARY_DIR	build/src/Makefile	/^CMAKE_BINARY_DIR = \/code\/jivjot\/Client\/build$/;"	m
+CMAKE_COMMAND	build/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
+CMAKE_COMMAND	build/src/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
+CMAKE_EDIT_COMMAND	build/Makefile	/^CMAKE_EDIT_COMMAND = \/usr\/bin\/ccmake$/;"	m
+CMAKE_EDIT_COMMAND	build/src/Makefile	/^CMAKE_EDIT_COMMAND = \/usr\/bin\/ccmake$/;"	m
+CMAKE_SOURCE_DIR	build/Makefile	/^CMAKE_SOURCE_DIR = \/code\/jivjot\/Client$/;"	m
+CMAKE_SOURCE_DIR	build/src/Makefile	/^CMAKE_SOURCE_DIR = \/code\/jivjot\/Client$/;"	m
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	10;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	13;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	16;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	19;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	22;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	25;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	28;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	31;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	34;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	37;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	42;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	53;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	56;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	62;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	65;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	68;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	12;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	15;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	18;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	21;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	24;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	27;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	30;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	33;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	36;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	39;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	44;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	47;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	53;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	56;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	59;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	9;"	d	file:
+ClOrderIdStrategyMap	src/samplestrategy.h	/^    typedef std::map<unsigned long, AbstractStrategy *> ClOrderIdStrategyMap;$/;"	t	class:StrategyDriver
+ClOrderIdStrategyMapIter	src/samplestrategy.h	/^    typedef ClOrderIdStrategyMap::const_iterator ClOrderIdStrategyMapIter;$/;"	t	class:StrategyDriver
+EMSG	src/getopt.c	53;"	d	file:
+FUTFUTSTRATEGY_H	src/futFutStrategy.h	2;"	d
+FutFutStrategy	src/futFutStrategy.cpp	/^FutFutStrategy::FutFutStrategy()$/;"	f	class:FutFutStrategy
+FutFutStrategy	src/futFutStrategy.h	/^class FutFutStrategy : public AbstractStrategy$/;"	c
+ID_VOID_MAIN	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	6;"	d	file:
+MARKET_DEPTH_SIZE	src/samplestrategy.h	/^const int MARKET_DEPTH_SIZE = 5;$/;"	v
+MarketData	src/samplestrategy.h	/^    struct MarketData$/;"	s	class:AbstractStrategy
+MaturityFormatWrong	src/futFutStrategy.h	/^struct MaturityFormatWrong : public std::exception $/;"	s
+MktDataSgMap	src/samplestrategy.h	/^    typedef std::map<std::string,std::set<AbstractStrategy *> > MktDataSgMap;$/;"	t	class:StrategyDriver
+MktDataSgMapIter	src/samplestrategy.h	/^    typedef std::set<AbstractStrategy *>::const_iterator MktDataSgMapIter;$/;"	t	class:StrategyDriver
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	101;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	104;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	107;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	110;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	113;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	116;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	122;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	125;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	128;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	131;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	134;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	137;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	140;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	143;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	146;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	149;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	152;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	155;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	158;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	80;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	83;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	86;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	89;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	92;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	95;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	98;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	101;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	104;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	107;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	113;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	116;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	119;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	122;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	125;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	128;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	131;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	134;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	137;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	140;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	143;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	146;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	149;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	71;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	74;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	77;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	80;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	83;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	86;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	89;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	92;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	95;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	98;"	d	file:
+ParamsFileAbsent	src/futFutStrategy.h	/^struct ParamsFileAbsent : public std::exception $/;"	s
+RM	build/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
+RM	build/src/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
+SAMPLESTRATEGY_H	src/samplestrategy.h	2;"	d
+SHELL	build/Makefile	/^SHELL = \/bin\/sh$/;"	m
+SHELL	build/src/Makefile	/^SHELL = \/bin\/sh$/;"	m
+SUFFIXES	build/Makefile	/^SUFFIXES =$/;"	m
+SUFFIXES	build/src/Makefile	/^SUFFIXES =$/;"	m
+SampleStrategy	src/samplestrategy.cpp	/^SampleStrategy::SampleStrategy()$/;"	f	class:SampleStrategy
+SampleStrategy	src/samplestrategy.h	/^class SampleStrategy : public AbstractStrategy$/;"	c
+StrategyDriver	src/samplestrategy.h	/^class StrategyDriver{$/;"	c
+TRADECLIENT_APPLICATION_H	src/application.h	23;"	d
+__progname	src/getopt-repl.h	/^  char* __progname;$/;"	v
+_appInstance	src/samplestrategy.h	/^    Application *_appInstance;$/;"	m	class:StrategyDriver
+_clOrderIdStrategyMap	src/samplestrategy.h	/^    ClOrderIdStrategyMap _clOrderIdStrategyMap;$/;"	m	class:StrategyDriver
+_exchange	src/futFutStrategy.h	/^  std::string _exchange;$/;"	m	class:FutFutStrategy
+_firstLegMarketDataRequest	src/futFutStrategy.h	/^  FIX42::MarketDataRequest _firstLegMarketDataRequest;$/;"	m	class:FutFutStrategy
+_firstLegOrderSide	src/futFutStrategy.h	/^  FIX::Side _firstLegOrderSide;$/;"	m	class:FutFutStrategy
+_firstLegWatchSide	src/futFutStrategy.h	/^  FIX::Side _firstLegWatchSide;$/;"	m	class:FutFutStrategy
+_maturityFirstLeg	src/futFutStrategy.h	/^  std::string _maturityFirstLeg;$/;"	m	class:FutFutStrategy
+_maturitySecondLeg	src/futFutStrategy.h	/^  std::string _maturitySecondLeg;$/;"	m	class:FutFutStrategy
+_mktDataSgMap	src/samplestrategy.h	/^    MktDataSgMap _mktDataSgMap;$/;"	m	class:StrategyDriver
+_price	src/samplestrategy.h	/^       long _price;$/;"	m	struct:AbstractStrategy::MarketData
+_qty	src/samplestrategy.h	/^       long _qty;$/;"	m	struct:AbstractStrategy::MarketData
+_secondLegMarketData	src/futFutStrategy.h	/^  MarketData _secondLegMarketData[MARKET_DEPTH_SIZE];$/;"	m	class:FutFutStrategy
+_secondLegMarketDataRequest	src/futFutStrategy.h	/^  FIX42::MarketDataRequest _secondLegMarketDataRequest;$/;"	m	class:FutFutStrategy
+_secondLegOrderSide	src/futFutStrategy.h	/^  FIX::Side _secondLegOrderSide;$/;"	m	class:FutFutStrategy
+_secondLegWatchSide	src/futFutStrategy.h	/^  FIX::Side _secondLegWatchSide;$/;"	m	class:FutFutStrategy
+_symbol	src/futFutStrategy.h	/^  std::string _symbol;$/;"	m	class:FutFutStrategy
+_type	src/samplestrategy.h	/^    AlgoType _type;$/;"	m	class:AbstractStrategy
+fromAdmin	src/application.h	/^  void fromAdmin( const FIX::Message& message, const FIX::SessionID& )$/;"	f	class:Application
+fromApp	src/application.cpp	/^void Application::fromApp( const FIX::Message& message, const FIX::SessionID& sessionID )$/;"	f	class:Application
+genClOrderId	src/samplestrategy.cpp	/^unsigned long StrategyDriver::genClOrderId()$/;"	f	class:StrategyDriver
+getInstance	src/samplestrategy.h	/^    static StrategyDriver* getInstance(){$/;"	f	class:StrategyDriver
+getMarketData	src/samplestrategy.cpp	/^void AbstractStrategy::getMarketData(const FIX42::MarketDataSnapshotFullRefresh &fixMarketData ,$/;"	f	class:AbstractStrategy
+getMarketDataUniqueSignature	src/application.cpp	/^std::string Application::getMarketDataUniqueSignature(const FIX42::MarketDataRequest &marketDataRequest)$/;"	f	class:Application
+getMarketDataUniqueSignature	src/application.cpp	/^std::string Application::getMarketDataUniqueSignature(const FIX42::Message *message) $/;"	f	class:Application
+getParametersDump	src/futFutStrategy.cpp	/^std::string FutFutStrategy::getParametersDump()$/;"	f	class:FutFutStrategy
+getType	src/samplestrategy.h	/^    AlgoType getType()$/;"	f	class:AbstractStrategy
+getopt	src/getopt.c	/^getopt(nargc, nargv, ostr)$/;"	f
+info_compiler	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^char* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v
+info_compiler	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v
+info_platform	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^char* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v
+info_platform	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v
+main	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^int main(int argc, char* argv[])$/;"	f
+main	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f
+main	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^int main(int argc, char* argv[])$/;"	f
+main	src/tradeclient.cpp	/^int main( int argc, char** argv )$/;"	f
+onCreate	src/application.h	/^  void onCreate( const FIX::SessionID& ) $/;"	f	class:Application
+onExecutionReport	src/samplestrategy.cpp	/^void StrategyDriver::onExecutionReport(const FIX42::ExecutionReport &report)$/;"	f	class:StrategyDriver
+onExecutionReport	src/samplestrategy.h	/^    virtual void onExecutionReport(const FIX42::ExecutionReport& executionReport){}$/;"	f	class:AbstractStrategy
+onLogon	src/application.cpp	/^void Application::onLogon( const FIX::SessionID& sessionID )$/;"	f	class:Application
+onLogout	src/application.cpp	/^void Application::onLogout( const FIX::SessionID& sessionID )$/;"	f	class:Application
+onMarketData	src/futFutStrategy.cpp	/^void FutFutStrategy::onMarketData(const FIX42::MarketDataSnapshotFullRefresh& mktDataSnapShot)$/;"	f	class:FutFutStrategy
+onMarketData	src/samplestrategy.h	/^    virtual void onMarketData(const FIX42::MarketDataSnapshotFullRefresh& mktDataSnapShot){}$/;"	f	class:AbstractStrategy
+onMarketDataSnampshot	src/samplestrategy.cpp	/^void StrategyDriver::onMarketDataSnampshot(const FIX42::MarketDataSnapshotFullRefresh &report)$/;"	f	class:StrategyDriver
+onMessage	src/application.cpp	/^void Application::onMessage$/;"	f	class:Application
+optarg	src/getopt.c	/^char	*optarg;		\/* argument associated with option *\/$/;"	v
+opterr	src/getopt.c	/^int	opterr = 1,		\/* if error message should be printed *\/$/;"	v
+optind	src/getopt.c	/^	optind = 1,		\/* index into parent argv vector *\/$/;"	v
+optopt	src/getopt.c	/^	optopt,			\/* character checked for validity *\/$/;"	v
+optreset	src/getopt.c	/^	optreset;		\/* reset getopt *\/$/;"	v
+queryAction	src/application.cpp	/^char Application::queryAction()$/;"	f	class:Application
+queryCancelOrder	src/application.cpp	/^void Application::queryCancelOrder()$/;"	f	class:Application
+queryCancelReplaceRequest42	src/application.cpp	/^FIX42::OrderCancelReplaceRequest Application::queryCancelReplaceRequest42()$/;"	f	class:Application
+queryClOrdID	src/application.cpp	/^FIX::ClOrdID Application::queryClOrdID()$/;"	f	class:Application
+queryConfirm	src/application.cpp	/^bool Application::queryConfirm( const std::string& query )$/;"	f	class:Application
+queryEnterOrder	src/application.cpp	/^void Application::queryEnterOrder()$/;"	f	class:Application
+queryHeader	src/application.cpp	/^void Application::queryHeader( FIX::Header& header )$/;"	f	class:Application
+queryMarketDataRequest	src/application.cpp	/^void Application::queryMarketDataRequest()$/;"	f	class:Application
+queryMarketDataRequest42	src/application.cpp	/^FIX42::MarketDataRequest Application::queryMarketDataRequest42($/;"	f	class:Application
+queryMarketDataRequest42	src/application.cpp	/^FIX42::MarketDataRequest Application::queryMarketDataRequest42()$/;"	f	class:Application
+queryMaturityDate	src/application.cpp	/^FIX::ExpireDate Application::queryMaturityDate()$/;"	f	class:Application
+queryMaturityDay	src/application.cpp	/^FIX::MaturityDay Application::queryMaturityDay()$/;"	f	class:Application
+queryMaturityMonthYear	src/application.cpp	/^FIX::MaturityMonthYear Application::queryMaturityMonthYear()$/;"	f	class:Application
+queryNewOrderSingle42	src/application.cpp	/^FIX42::NewOrderSingle Application::queryNewOrderSingle42()$/;"	f	class:Application
+queryOptionMode	src/application.cpp	/^FIX::PutOrCall Application::queryOptionMode()$/;"	f	class:Application
+queryOrdType	src/application.cpp	/^FIX::OrdType Application::queryOrdType()$/;"	f	class:Application
+queryOrderCancelRequest42	src/application.cpp	/^FIX42::OrderCancelRequest Application::queryOrderCancelRequest42()$/;"	f	class:Application
+queryOrderQty	src/application.cpp	/^FIX::OrderQty Application::queryOrderQty()$/;"	f	class:Application
+queryOrigClOrdID	src/application.cpp	/^FIX::OrigClOrdID Application::queryOrigClOrdID()$/;"	f	class:Application
+queryPrice	src/application.cpp	/^FIX::Price Application::queryPrice()$/;"	f	class:Application
+queryReplaceOrder	src/application.cpp	/^void Application::queryReplaceOrder()$/;"	f	class:Application
+querySecurityExchange	src/application.cpp	/^FIX::SecurityExchange Application::querySecurityExchange()$/;"	f	class:Application
+querySecurityType	src/application.cpp	/^FIX::SecurityType Application::querySecurityType()$/;"	f	class:Application
+querySenderCompID	src/application.cpp	/^FIX::SenderCompID Application::querySenderCompID()$/;"	f	class:Application
+querySide	src/application.cpp	/^FIX::Side Application::querySide()$/;"	f	class:Application
+queryStopPx	src/application.cpp	/^FIX::StopPx Application::queryStopPx()$/;"	f	class:Application
+queryStrikePrice	src/application.cpp	/^FIX::StrikePrice Application::queryStrikePrice()$/;"	f	class:Application
+querySymbol	src/application.cpp	/^FIX::Symbol Application::querySymbol()$/;"	f	class:Application
+queryTargetCompID	src/application.cpp	/^FIX::TargetCompID Application::queryTargetCompID()$/;"	f	class:Application
+queryTargetSubID	src/application.cpp	/^FIX::TargetSubID Application::queryTargetSubID()$/;"	f	class:Application
+queryTimeInForce	src/application.cpp	/^FIX::TimeInForce Application::queryTimeInForce()$/;"	f	class:Application
+rcsid	src/getopt.c	/^static const char rcsid[] = "$FreeBSD: src\/lib\/libc\/stdlib\/getopt.c,v 1.2.2.2 2001\/08\/26 03:36:04 jkoshy Exp $";$/;"	v	file:
+readOptionsfromFile	src/futFutStrategy.cpp	/^void FutFutStrategy::readOptionsfromFile(const std::string &filePath)$/;"	f	class:FutFutStrategy
+registerClOrderId	src/samplestrategy.cpp	/^void AbstractStrategy::registerClOrderId(const unsigned long &orderId)$/;"	f	class:AbstractStrategy
+registerMktData	src/samplestrategy.cpp	/^void AbstractStrategy::registerMktData(const FIX42::MarketDataRequest &marketDataRequest)$/;"	f	class:AbstractStrategy
+registerStrategyClOrderId	src/samplestrategy.h	/^    void registerStrategyClOrderId(const unsigned long &orderId, AbstractStrategy *strategy)$/;"	f	class:StrategyDriver
+registerStrategyForMktData	src/samplestrategy.h	/^    void registerStrategyForMktData(AbstractStrategy *strategy,$/;"	f	class:StrategyDriver
+run	src/application.cpp	/^void Application::run()$/;"	f	class:Application
+subscribeMarketDataFeed	src/futFutStrategy.cpp	/^void FutFutStrategy::subscribeMarketDataFeed()$/;"	f	class:FutFutStrategy
+subscribeMarketDataFeedLeg	src/futFutStrategy.cpp	/^void FutFutStrategy::subscribeMarketDataFeedLeg(const std::string &maturity,$/;"	f	class:FutFutStrategy
+toAdmin	src/application.h	/^  void toAdmin( FIX::Message& message, const FIX::SessionID& ) $/;"	f	class:Application
+toApp	src/application.cpp	/^void Application::toApp( FIX::Message& message, const FIX::SessionID& sessionID )$/;"	f	class:Application
+unRegisterStrategyForMktData	src/samplestrategy.h	/^    void unRegisterStrategyForMktData(AbstractStrategy *strategy,$/;"	f	class:StrategyDriver
+validateParameters	src/futFutStrategy.cpp	/^void FutFutStrategy::validateParameters()$/;"	f	class:FutFutStrategy
+what	src/futFutStrategy.h	/^    const char* what() const throw()$/;"	f	struct:MaturityFormatWrong
+what	src/futFutStrategy.h	/^    const char* what() const throw()$/;"	f	struct:ParamsFileAbsent
+~AbstractStrategy	src/samplestrategy.h	/^    virtual ~AbstractStrategy()$/;"	f	class:AbstractStrategy

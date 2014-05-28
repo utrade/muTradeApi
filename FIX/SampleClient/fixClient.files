@@ -1,0 +1,7 @@
+build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c
+build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp
+src/application.cpp
+src/application.h
+src/getopt-repl.h
+src/getopt.c
+src/tradeclient.cpp

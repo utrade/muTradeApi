@@ -1,0 +1,6 @@
+To build:
+
+1) cmake ..
+2) make
+
+The binary will be generated inside ../bin directory
